@@ -11,12 +11,12 @@ public class SortingTest {
     Sorting sorting;
     
     @Test(expected = IllegalArgumentException.class)
-    public void testNullCase()throws Exception {
+    public void testNullCase() {
     int [] array = null;
     sorting.sort(array);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testEmptyCase() {
         int [] array = {};
         sorting.sort(array);   
@@ -34,7 +34,7 @@ public class SortingTest {
     @Test
     public void testSortedArraysCase() {
      int [] expected = {1,2,3,4,5};
-     int [] given = {5,3,2,4,1};
+     int [] given = {1,2,3,4,5};
      sorting.sort(given);
      Assert.assertArrayEquals(expected,given);
     }
@@ -45,7 +45,7 @@ public class SortingTest {
         int [] given = {5,3,2,4,1};
         int [] expected = {1,2,3,4,5};
         sorting.sort(given);
-        Assert.assertNotEquals(given,expected);
+        Assert.assertArrayEquals(given,expected);
     }
 
 }
