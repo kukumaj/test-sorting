@@ -36,13 +36,14 @@ public class SortingTest {
      int [] expected = {1,2,3,4,5};
      int [] given = {5,3,2,4,1};
      sorting.sort(given);
-     Assert.assertArrayEquals(given,expected);
+     Assert.assertArrayEquals(expected,given);
     }
 
     @Test
     public void testOtherCases() {
-        int [] expected = {1,2,3,4,5};
+
         int [] given = {5,3,2,4,1};
+        int [] expected = {1,2,3,4,5};
         sorting.sort(given);
         Assert.assertNotEquals(given,expected);
     }

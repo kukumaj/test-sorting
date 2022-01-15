@@ -8,6 +8,7 @@ public class Sorting {
             throw new IllegalArgumentException();
         }
         Arrays.sort(array);
+        System.out.println();
         //throw new UnsupportedOperationException();
     }
 }
